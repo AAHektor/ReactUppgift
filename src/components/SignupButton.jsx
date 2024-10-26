@@ -4,7 +4,7 @@ import SignupIcon from '../assets/images/signinup-icon.svg'
 const SignupButton = () => {
   return (
     
-    <a id="auth-signin" href="#" class="btn-primary">
+    <a id="auth-signin" href="#" className="btn-primary">
         <div>
             <img src={SignupIcon} />
             <span>Sign in / up</span>
