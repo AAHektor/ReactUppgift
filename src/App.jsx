@@ -1,4 +1,5 @@
 import './assets/css/styles.css'
+import DesktopOnlyPage1 from './components/DesktopOnlyPage1/DesktopOnlyPage1'
 import Footer from './components/Footer/Footer'
 import Header from './components/Header/Header'
 import MainPage from './components/MainPage/MainPage'
@@ -16,6 +17,8 @@ function App() {
       <Page2 />
 
       <Page3 />
+
+      <DesktopOnlyPage1 />
 
       <Footer />
     </>
