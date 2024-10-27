@@ -6,6 +6,7 @@ import Header from './components/Header/Header'
 import MainPage from './components/MainPage/MainPage'
 import Page2 from './components/Page2/Page2'
 import Page3 from './components/Page3/Page3'
+import Page4 from './components/Page4/Page4'
 
 function App() {
 
@@ -22,6 +23,8 @@ function App() {
       <DesktopOnlyPage1 />
 
       <DesktopOnlyPage2 />
+
+      <Page4 />
 
       <Footer />
     </>
