@@ -1,5 +1,5 @@
 import React from 'react'
-import SignupIcon from '../assets/images/signinup-icon.svg'
+import SignupIcon from '../../assets/images/signinup-icon.svg'
 
 const SignupButton = () => {
   return (

@@ -1,5 +1,5 @@
 import React from 'react'
-import LogoType from '../assets/images/logo.svg.svg'
+import LogoType from '../../assets/images/logo.svg.svg'
 
 const SiliconLogo = () => {
   return (

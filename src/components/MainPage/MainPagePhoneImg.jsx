@@ -1,6 +1,6 @@
 import React from 'react'
-import MainPagePhoneImages from '../assets/images/phone-back.svg'
-import MainPagePhoneImages2 from '../assets/images/phone-front.svg'
+import MainPagePhoneImages from '../../assets/images/phone-back.svg'
+import MainPagePhoneImages2 from '../../assets/images/phone-front.svg'
 
 const MainPagePhoneImg = () => {
   return (
