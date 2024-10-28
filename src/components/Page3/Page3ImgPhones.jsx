@@ -9,7 +9,7 @@ import Page3PhoneImg6 from '../../assets/images/images-page-3/tablet-right.svg'
 
 const Page3ImgPhones = () => {
   return (
-    <div class="img-phones-container">
+    <div className="img-phones-container">
       <img id="left-phone" src={Page3PhoneImg1} alt="" />
       <img id="mid-phone" src={Page3PhoneImg2} alt="" />
       <img id="right-phone" src={Page3PhoneImg3} alt="" />

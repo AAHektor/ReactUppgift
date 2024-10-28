@@ -4,9 +4,9 @@ import Smallimg2 from '../../assets/images/images-page-4/lower-small1.svg'
 
 const DesktopOnlyPage1LowerImg = () => {
   return (
-    <div class="lower-images-container">
-        <img class="big-image2" src={Bigimg2} alt="" />
-        <img class="small-image2" src={Smallimg2} alt="" />
+    <div className="lower-images-container">
+        <img className="big-image2" src={Bigimg2} alt="" />
+        <img className="small-image2" src={Smallimg2} alt="" />
     </div>
   )
 }

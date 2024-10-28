@@ -2,8 +2,8 @@ import React from 'react'
 
 const Page4ButtonContainer = () => {
   return (
-    <div class="button-container">
-        <button class="btn-contact">Contact us now</button>
+    <div className="button-container">
+        <button className="btn-contact">Contact us now</button>
     </div>
   )
 }

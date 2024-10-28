@@ -2,7 +2,7 @@ import React from 'react'
 
 const Page4EmptyContainer = () => {
   return (
-    <div class="empty">
+    <div className="empty">
       
     </div>
   )
