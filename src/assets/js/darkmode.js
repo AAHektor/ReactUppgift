@@ -2,6 +2,7 @@
 // du behöver också en checkbox med id="darkmode-switch" i din HTML
 
 
+
 const darkmodeSwitch = document.querySelector('#darkmode-switch')
 const hasDarkmode = localStorage.getItem('darkmode')
 
