@@ -1768,7 +1768,8 @@ header .container {
     }
 
     .navbar {
-        display: block;
+        display: flex;
+        gap: 1.5rem;
     }
 
     #auth-signin {

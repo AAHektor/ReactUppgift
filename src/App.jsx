@@ -1,33 +1,21 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './assets/css/styles.css'
-import DesktopOnlyPage1 from './components/DesktopOnlyPage1/DesktopOnlyPage1'
-import DesktopOnlyPage2 from './components/DesktopOnlyPage2/DesktopOnlyPage2'
-import Footer from './components/Footer/Footer'
+import Home from './views/Home'
+import Contact from './views/Contact'
 import Header from './components/Header/Header'
-import MainPage from './components/MainPage/MainPage'
-import Page2 from './components/Page2/Page2'
-import Page3 from './components/Page3/Page3'
-import Page4 from './components/Page4/Page4'
 
 function App() {
 
   return (
-    <>
+    <BrowserRouter>
       <Header />
-
-      <MainPage />
-
-      <Page2 />
-
-      <Page3 />
-
-      <DesktopOnlyPage1 />
-
-      <DesktopOnlyPage2 />
-
-      <Page4 />
-
-      <Footer />
-    </>
+        <main>
+        <Routes>
+          <Route path="/" element={<Home />}/>
+          <Route path="/contact" element={<Contact />}/>
+        </Routes>
+      </main>
+    </BrowserRouter>
   )
 }
 
