@@ -9,9 +9,15 @@ const ContactPage = () => {
     <section id="contact">
       <div className='container'>
         <ContactPageHierarchy />
-        <ContactPageHeadline />
-        <ContactPageCard1 />
-        <ContactPageForm />
+        <div className='contactPage1-layout'>
+          <div>
+             <ContactPageHeadline />
+             <ContactPageCard1 />
+          </div>
+          <div>
+             <ContactPageForm />
+          </div>
+        </div>
       </div>
     </section>
   )

@@ -1783,6 +1783,22 @@ header .container {
 
 }
 
+/* CONTACT P1 LAYOUT */
+
+.contactPage1-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    @media (max-width: 1400px) {
+        grid-template-columns: none;
+        grid-template-rows: auto auto;
+    }
+
+    @media (max-width: 768px) {
+
+    }
+}
+
 
 /* CONTACT PAGE */
 /* CONTACT PAGE */
@@ -1791,8 +1807,18 @@ header .container {
 #contact {
     background-color: #F3F6FF;
 
+    height: 720px;
+
+    @media (max-width: 1400px) {
+        height: auto;
+    }
+
     .container {
-        padding-bottom: 10rem;
+        
+        @media (max-width: 1400px) {
+            
+            padding-bottom: 5rem;
+        }
     }
 
     .hierarchy {
@@ -1867,9 +1893,9 @@ header .container {
     /* FORM STARTS HERE */
 
     .form-container {
-        position: absolute;
-        right: 310px;
-        top: 200px;
+        position: relative;
+        top: 60px;
+        left: 30px;
 
         display: flex;
         flex-direction: column;
@@ -1900,6 +1926,23 @@ header .container {
             color: #fff;
             font-size: 16px;
             font-weight: 600;
+
+            @media (max-width: 768px) {
+                width: 100%;
+                height: auto;
+                margin-top: 2.5rem;
+            }
+        }
+
+        @media (max-width: 1400px) {
+            position: unset;
+            margin-top: 5rem;
+            justify-self: center;
+        }
+        @media (max-width: 768px) {
+            width: 100%;
+            height: auto;
+            padding: 1.5rem;
         }
     }
 
@@ -1925,17 +1968,34 @@ header .container {
 #contact-page-2 {
 
     .container {
-        padding-top: 12rem;
+        padding-top: 14rem;
         padding-bottom: 12rem;
 
         display: flex;
         gap: 10rem;
+
+        @media (max-width: 1400px) {
+            flex-direction: column;
+            padding-top: 5rem;
+            padding-bottom: 5rem;
+            gap: 5rem;
+        }
     }
 
     .maps-container {
+        @media (max-width: 768px) {
+            align-self: center;
+        }
+        
         img {
             border-radius: 8px;
+            @media (max-width: 768px) {
+                max-width: 100%;
+                height: auto;
+            }
         }
+
+        
     }
 
     .medical-container {
