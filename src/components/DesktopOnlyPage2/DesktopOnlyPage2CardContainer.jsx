@@ -1,62 +1,56 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import DesktopOnlyPage2img1 from '../../assets/images/images-page-5/quotes.svg'
-import DesktopOnlyPage2img2 from '../../assets/images/images-page-5/rating.svg'
-import DesktopOnlyPage2img3 from '../../assets/images/images-page-5/avatar.svg'
 
-import DesktopOnlyPage2img4 from '../../assets/images/images-page-5/quotes.svg'
-import DesktopOnlyPage2img5 from '../../assets/images/images-page-5/rating2.svg'
-import DesktopOnlyPage2img6 from '../../assets/images/images-page-5/albert.svg'
+import StarOutlineIcon from '../../assets/images/images-page-5/starOutline.svg'
+import StarIcon from '../../assets/images/images-page-5/star.svg'
 
 const DesktopOnlyPage2CardContainer = () => {
+
+    const [testimonials, setTestimonials] = useState([])
+
+    const fetchData = async () => {
+        const res = await fetch('https://win24-assignment.azurewebsites.net/api/testimonials')
+        const data = await res.json()
+        setTestimonials(data)
+    }
+
+    useEffect(() => {
+        fetchData()
+    }, [])
+
+    const renderStars = (starRating) => {
+        return Array.from({ length: 5 }).map((_, index) => (
+            <img key={index}
+             src={index < starRating ? StarIcon : StarOutlineIcon} 
+             alt="Star" 
+             className='star-icon' />
+        ))
+    }
+    
   return (
     <div className="card-container">
-      <div className="card">
-          <div className="card-icon">
-              <img src={DesktopOnlyPage2img1} alt="" />
-          </div>
-          <div className="card-rating-icon">
-              <img src={DesktopOnlyPage2img2} alt="" />
-          </div>
-          <div className="card-text">
-              <p>Sit pretium aliquam tempor, orci dolor sed <br /> maecenas rutrum sagittis. Laoreet posuere <br />
-                  rhoncus, egestas lacus, egestas justo <br /> aliquam vel. 
-                  Nisi vitae lectus hac hendrerit. <br /> Montes justo turpis sit amet.</p>
-          </div>
-          <div className="avatar-text-container">
-              <img src={DesktopOnlyPage2img3} alt="" />
-              <div>
-                  <h5>Fannie Summers</h5>
-                  <p>Designer</p>
-              </div>
-          </div>
-          
+        {testimonials.map((testimonial) => (
+        <div key={testimonial.id} className="card">
+            <div className="card-icon">
+                <img src={DesktopOnlyPage2img1} alt="" />
+            </div>
+            <div className="card-rating-icon">
+                {renderStars(testimonial.starRating)}
+            </div>
+            <div className="card-text">
+                <p>{testimonial.comment}</p>
+            </div>
+            <div className="avatar-text-container">
+                <img src={testimonial.avatarUrl} alt="" />
+                <div>
+                    <h5>{testimonial.author}</h5>
+                    <p>{testimonial.jobRole}</p>
+                </div>
+            </div>
+        </div>
+        ))}
 
-      </div>
-
-      <div className="card">
-          <div className="card-icon">
-              <img src={DesktopOnlyPage2img4} alt="" />
-          </div>
-          <div className="card-rating-icon">
-              <img src={DesktopOnlyPage2img5} alt="" />
-          </div>
-          <div className="card-text">
-              <p>Sit pretium aliquam tempor, orci dolor sed <br /> maecenas rutrum sagittis. Laoreet posuere <br />
-                  rhoncus, egestas lacus, egestas justo <br /> aliquam vel. 
-                  Nisi vitae lectus hac hendrerit. <br /> Montes justo turpis sit amet.</p>
-          </div>
-          <div className={DesktopOnlyPage2img6}>
-              <img src="images/images-page-5/albert.svg" alt="" />
-              <div>
-                  <h5>Albert Flores</h5>
-                  <p>Designer</p>
-              </div>
-          </div>
-        
-
-      </div>
-
-  </div>
+    </div>
   )
 }
 
