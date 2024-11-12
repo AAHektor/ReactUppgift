@@ -1639,9 +1639,10 @@ header .container {
 
     }
 
-    #input-mobile-tablet {
+    #input-newsletter {
+        color: var(--clr-hero-text);
         @media (min-width: 1400px) {
-            display: none;
+            display: flex;
         }
     }
 
@@ -1670,6 +1671,23 @@ header .container {
     }
     .btn-subscribe:hover {
         background-color: var(--clr-primary-hover);
+    }
+
+    .success-message {
+        color: rgb(255, 255, 255);
+        align-self: center;
+        font-size: 20px;
+        
+        @media (min-width: 768px) {
+            width: 317.36px;
+            font-size: 23px;
+        }
+
+        @media (min-width: 1400px) {
+            
+            width: 381.36px;
+            font-size: 26px;
+        }
     }
 }
 
