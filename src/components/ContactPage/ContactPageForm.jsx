@@ -13,7 +13,6 @@ const ContactPageForm = () => {
     const emailRegex = /^[\w.-]+@[a-zA-Z\d.-]+\.[a-zA-Z]{2,}$/;
 
     setFormData({...formData, [name]: value});
-
     if (value.trim() === '') {
         setErrors(prevErrors => ({
             ...prevErrors, 
@@ -64,6 +63,8 @@ const ContactPageForm = () => {
       },
       body: JSON.stringify(formData)
     })
+
+    console.log('Response:', res);
 
     if (res.ok) {
       setSubmitted(true);

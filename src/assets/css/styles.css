@@ -2065,13 +2065,17 @@ header .container {
 }
 
 .informationbox {
+    position: relative;
+    top: 60px;
+    left: 30px;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     
-    width: 33rem;
-    height: 40rem;
+    width: 600px;
+    height: 731.38px;
     gap: 2rem;
     border-radius: 8px;
     background-color: rgba(0, 128, 0, 0.61);
