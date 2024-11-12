@@ -6,16 +6,37 @@ const ContactPageForm = () => {
   const [errors, setErrors] = useState({})
   const [submitted, setSubmitted] = useState(false)
 
+  // tagit hjälp av ChatGPT
   const handleChange = (e) => {
     const { name, value } = e.target; 
+    const fullNameRegex = /^[A-Za-zÀ-ÖØ-öø-ÿ\s'-]+$/;
+    const emailRegex = /^[\w.-]+@[a-zA-Z\d.-]+\.[a-zA-Z]{2,}$/;
+
     setFormData({...formData, [name]: value});
 
     if (value.trim() === '') {
-      setErrors(prevErrors => ({...prevErrors, [name]: `The ${name === 'fullName' ? 'Full name' : name === 'email' ? 'Email address' : 'Specialist'} field is required.`}))
+        setErrors(prevErrors => ({
+            ...prevErrors, 
+            [name]: `The ${name === 'fullName' ? 'Full name' : name === 'email' ? 'Email address' : 'Specialist'} field is required.`
+        }));
+    } else if (name === 'fullName' && !fullNameRegex.test(value)) {
+        setErrors(prevErrors => ({
+            ...prevErrors,
+            fullName: 'Full name can only contain letters, spaces, hyphens, and apostrophes.'
+        }));
+    } else if (name === 'email' && !emailRegex.test(value)) {
+        setErrors(prevErrors => ({
+            ...prevErrors,
+            email: 'Invalid email format.'
+        }));
     } else {
-      setErrors(prevErrors => ({...prevErrors, [name]: ''}))
+        setErrors(prevErrors => ({
+            ...prevErrors,
+            [name]: ''
+        }));
     }
   };
+
 
   const handleOk = () => {
     setSubmitted(false)

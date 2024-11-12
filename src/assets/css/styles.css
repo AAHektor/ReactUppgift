@@ -1920,6 +1920,11 @@ header .container {
             color: var(--clr-hero-text);
         }
 
+        span {
+            color: rgba(255, 0, 0, 0.726);
+            font-size: 16px;
+        }
+
         input {
             padding: 1em;
             border-radius: 8px;
