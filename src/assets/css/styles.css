@@ -2155,7 +2155,7 @@ header .container {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
+
     width: 600px;
     height: 731.38px;
     gap: 2rem;
@@ -2187,6 +2187,22 @@ header .container {
             transition-duration: 300ms;
             background-color: rgb(23, 133, 23);
         }
+
+        @media (max-width: 768px) {
+            width: 100%;
+            padding: 1.5rem;
+        }
+    }
+
+    @media (max-width: 1400px) {
+        position: unset;
+        margin-top: 5rem;
+        justify-self: center;
+    }
+    @media (max-width: 768px) {
+        width: 100%;
+        height: auto;
+        padding: 1.5rem;
     }
 }
 

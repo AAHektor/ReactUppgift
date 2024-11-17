@@ -1,6 +1,8 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
+import { ValidationContext } from '../ValidationContext';
 
 const ContactPageForm = () => {
+  const { validateEmail } = useContext(ValidationContext);
 
   const [formData, setFormData] = useState({ fullName: '', email: '', specialist: ''})
   const [errors, setErrors] = useState({})
@@ -10,7 +12,6 @@ const ContactPageForm = () => {
   const handleChange = (e) => {
     const { name, value } = e.target; 
     const fullNameRegex = /^[A-Za-zÀ-ÖØ-öø-ÿ\s'-]+$/;
-    const emailRegex = /^[\w.-]+@[a-zA-Z\d.-]+\.[a-zA-Z]{2,}$/;
 
     setFormData({...formData, [name]: value});
     if (value.trim() === '') {
@@ -23,11 +24,12 @@ const ContactPageForm = () => {
             ...prevErrors,
             fullName: 'Full name can only contain letters, spaces, hyphens, and apostrophes.'
         }));
-    } else if (name === 'email' && !emailRegex.test(value)) {
-        setErrors(prevErrors => ({
-            ...prevErrors,
-            email: 'Invalid email format.'
-        }));
+    } else if (name === 'email') {
+      const emailError = validateEmail(value);
+      setErrors(prevErrors => ({
+        ...prevErrors,
+        email: emailError || ''
+      }));
     } else {
         setErrors(prevErrors => ({
             ...prevErrors,

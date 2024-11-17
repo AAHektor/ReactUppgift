@@ -1,14 +1,14 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
+import { ValidationContext } from '../ValidationContext';
 import Page4Img1 from '../../assets/images/images-last/notification.svg';
 
 const Page4NewsletterContainer = () => {
+  const { validateEmail } = useContext(ValidationContext);
+
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
   const [error, setError] = useState('');
   const [formVisible, setFormVisible] = useState(true);
-  
-  // Chatgpt regex
-  const emailRegex = /^[\w!#$%&'*+/=?^_`{|}~-]+(?:\.[\w!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-zA-Z0-9-]+\.)+[a-zA-Z]{2,}$/;
   
   
   // Hjälp av ChatGPT
@@ -16,9 +16,11 @@ const Page4NewsletterContainer = () => {
     e.preventDefault();
     setMessage('');
     setError('');
-  
-    if (!email || !emailRegex.test(email)) {
-      setError('Please enter a valid email address.');
+    
+
+    const emailError = validateEmail(email);
+    if (emailError) {
+      setError(emailError);
       return;
     }
   
