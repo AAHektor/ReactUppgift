@@ -3,7 +3,7 @@ import React from 'react'
 const MedicalCard = () => {
   return (
     <>
-    <div class="medical-card">
+    <div className="medical-card">
         <h4>Medical Center 1</h4>
         <span>
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -24,11 +24,11 @@ const MedicalCard = () => {
                 <path d="M9.85792 1.66675C5.32825 1.66675 1.64307 5.40508 1.64307 10.0001C1.64307 14.5951 5.32825 18.3334 9.85792 18.3334C14.3876 18.3334 18.0728 14.5951 18.0728 10.0001C18.0728 5.40508 14.3876 1.66675 9.85792 1.66675ZM9.85792 16.6667C6.23435 16.6667 3.28604 13.6759 3.28604 10.0001C3.28604 6.32425 6.23435 3.33341 9.85792 3.33341C13.4815 3.33341 16.4298 6.32425 16.4298 10.0001C16.4298 13.6759 13.4815 16.6667 9.85792 16.6667Z" fill="#6366F1"/>
                 <path d="M10.6791 5.83325H9.03613V10.3449L11.7413 13.0891L12.9029 11.9108L10.6791 9.65492V5.83325Z" fill="#6366F1"/>
                 </svg>   
-            <p class="schedule"><span>Mon - Fri:</span> 9:00 am - 22:00 am <br />
+            <p className="schedule"><span>Mon - Fri:</span> 9:00 am - 22:00 am <br />
                 <span>Sat - Sun:</span> 9:00 am - 20:00 am</p>
         </span>
     </div>
-    <div class="medical-card">
+    <div className="medical-card">
         <h4>Medical Center 2</h4>
         <span>
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -49,7 +49,7 @@ const MedicalCard = () => {
                 <path d="M9.85792 1.66675C5.32825 1.66675 1.64307 5.40508 1.64307 10.0001C1.64307 14.5951 5.32825 18.3334 9.85792 18.3334C14.3876 18.3334 18.0728 14.5951 18.0728 10.0001C18.0728 5.40508 14.3876 1.66675 9.85792 1.66675ZM9.85792 16.6667C6.23435 16.6667 3.28604 13.6759 3.28604 10.0001C3.28604 6.32425 6.23435 3.33341 9.85792 3.33341C13.4815 3.33341 16.4298 6.32425 16.4298 10.0001C16.4298 13.6759 13.4815 16.6667 9.85792 16.6667Z" fill="#6366F1"/>
                 <path d="M10.6791 5.83325H9.03613V10.3449L11.7413 13.0891L12.9029 11.9108L10.6791 9.65492V5.83325Z" fill="#6366F1"/>
                 </svg>                            
-            <p class="schedule">
+            <p className="schedule">
                 <span>Mon - Fri:</span> 9:00 am - 22:00 am<br />
                 <span>Sat - Sun:</span> 9:00 am - 20:00 am
             </p>

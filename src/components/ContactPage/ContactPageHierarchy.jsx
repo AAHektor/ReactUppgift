@@ -2,16 +2,16 @@ import React from 'react'
 
 const ContactPageHierarchy = () => {
   return (
-    <div class="hierarchy">
+    <div className="hierarchy">
         <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M3.75244 16.5002H6.75244H11.2524H14.2524C15.0797 16.5002 15.7524 15.8274 15.7524 15.0002V8.25019C15.7524 8.05144 15.6737 7.86019 15.5327 7.71994L9.53269 1.71994C9.23944 1.42669 8.76544 1.42669 8.47219 1.71994L2.47219 7.71994C2.33119 7.86019 2.25244 8.05144 2.25244 8.25019V15.0002C2.25244 15.8274 2.92519 16.5002 3.75244 16.5002ZM7.50244 15.0002V11.2502H10.5024V15.0002H7.50244ZM3.75244 8.56069L9.00244 3.31069L14.2524 8.56069L14.2532 15.0002H12.0024V11.2502C12.0024 10.4229 11.3297 9.75019 10.5024 9.75019H7.50244C6.67519 9.75019 6.00244 10.4229 6.00244 11.2502V15.0002H3.75244V8.56069Z" fill="#9397AD"/>
         </svg>
-      <a href="index.html"><p class="hierarchy-text">Homepage</p></a>
+      <a href="/"><p className="hierarchy-text">Homepage</p></a>
         <svg width="9" height="8" viewBox="0 0 9 8" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M3.86409 1.14003L6.74743 4.00003L3.86409 6.86003L4.80276 7.80669L8.64076 4.00003L4.80276 0.193359L3.86409 1.14003Z" fill="#9397AD"/>
         <path d="M1.46943 0.193359L0.530762 1.14003L3.4141 4.00003L0.530762 6.86003L1.46943 7.80669L5.30743 4.00003L1.46943 0.193359Z" fill="#9397AD"/>
         </svg>
-      <a class="active" href="contact.html"><p>Contact</p></a>
+      <a className="active" href="/contact"><p>Contact</p></a>
     </div>
   )
 }

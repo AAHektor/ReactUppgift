@@ -4,7 +4,7 @@ import Socials from './Socials'
 
 const ContactPage2Medical = () => {
   return (
-    <div class="medical-container">
+    <div className="medical-container">
       <MedicalCard />
 
       <Socials />
